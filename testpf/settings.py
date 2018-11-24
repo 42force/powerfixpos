@@ -25,7 +25,11 @@ SECRET_KEY = 'i_qkpar!&9!ifs()d=d!679b6i$6rw3rp%e&gt))s!2p9idk(^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+        'citric-sprite-220706.appspot.com',
+        'citric-sprite-220706',
+        '127.0.0.1'
+]
 
 
 # Application definition
@@ -37,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pfpos.apps.PfposConfig',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +59,7 @@ ROOT_URLCONF = 'testpf.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,10 +80,28 @@ WSGI_APPLICATION = 'testpf.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
+
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'posdb', #name of the schema inside pfpos connection
+        'USER': 'root',
+        'PASSWORD': 'root',
+		'OPTIONS': {
+    	'sql_mode': 'STRICT_TRANS_TABLES',},
+		'https://console.cloud.google.com/sql/instances'
+        'HOST': '127.0.0.1',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
+
+
+
+
+
+# [END dbconfig]
+
 
 
 # Password validation
@@ -105,7 +128,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Singapore'
 
 USE_I18N = True
 
@@ -118,3 +141,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
