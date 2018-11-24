@@ -12,7 +12,7 @@ env_variables:
     # Replace user, password, database, and instance connection name with the values obtained
     # when configuring your Cloud SQL instance.
      SQLALCHEMY_DATABASE_URI: >-
-      mysql+pymysql://testroot:testroot@/DATABASE?unix_socket=/cloudsql/powerfix
+      mysql+pymysql://localhost:root@/DATABASE?unix_socket=/cloudsql/powerfix
 
 # runtime: python
 #
