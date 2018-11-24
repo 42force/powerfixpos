@@ -146,6 +146,10 @@ STATIC_URL = 'https://storage.googleapis.com/citric-sprite-220706.appspot.com/st
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
 
 
 LOGIN_REDIRECT_URL = 'home'
