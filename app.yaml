@@ -6,13 +6,13 @@ runtime_config:
   python_version: 3
 
 beta_settings:
-    cloud_sql_instances: citric-sprite-220706:asia-east1:powerfix
+    cloud_sql_instances: ccitric-sprite-220706:us-central1:pftest
 
 env_variables:
     # Replace user, password, database, and instance connection name with the values obtained
     # when configuring your Cloud SQL instance.
      SQLALCHEMY_DATABASE_URI: >-
-      mysql+pymysql://localhost:root@/DATABASE?unix_socket=/cloudsql/powerfix
+      mysql+pymysql://root:root@/DATABASE?unix_socket=/cloudsql/pftest
 
 # runtime: python
 #
