@@ -12,7 +12,7 @@ env_variables:
     # Replace user, password, database, and instance connection name with the values obtained
     # when configuring your Cloud SQL instance.
      SQLALCHEMY_DATABASE_URI: >-
-      mysql+pymysql://root:root@/DATABASE?unix_socket=/cloudsql/pftest
+      mysql+pymysql://root:root@/posdb?unix_socket=/cloudsql/citric-sprite-220706:us-central1:pftest
 
 # runtime: python
 #

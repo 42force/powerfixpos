@@ -142,7 +142,6 @@ USE_TZ = True
 
 STATIC_URL = 'https://storage.googleapis.com/citric-sprite-220706.appspot.com/static/'
 
-
 #STATIC_ROOT = '/Users/wackygalang/Projects/powerfixstaticfiles/static'
 
 STATIC_URL = '/static/'
