@@ -91,7 +91,7 @@ DATABASES = {
 		'OPTIONS': {
     	'sql_mode': 'STRICT_TRANS_TABLES',},
 		'https://console.cloud.google.com/sql/instances'
-        'HOST': '127.0.0.1',   # Or an IP Address that your DB is hosted on
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }
