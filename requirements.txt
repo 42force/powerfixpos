@@ -3,7 +3,7 @@ Babel==2.6.0
 certifi==2018.8.13
 cffi==1.11.5
 chardet==3.0.4
-cryptography==2.3.1
+cryptography==3.2
 Django==2.1.2
 django-phonenumber-field==2.0.1
 enum34==1.1.6
